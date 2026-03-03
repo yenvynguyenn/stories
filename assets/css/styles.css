@@ -1,6 +1,11 @@
 /* styles.css */
 
-h1 {
-	font-size: 150 px;
-	color: hotpink;
+.secret {
+    color: #0b1a0b;          /* same as background */
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.secret:hover {
+    color: #b6ffb6;          /* becomes visible */
 }
