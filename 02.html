@@ -5,8 +5,8 @@
 
 <style>
 body {
-    background-color: #050505;
-    color: #d8b6ff;
+    background-color: #080000;
+    color: #ff4d4d;
     font-family: "Courier New", monospace;
     text-align: center;
     padding-top: 100px;
@@ -18,7 +18,7 @@ body {
     margin: auto;
     margin-bottom: 30px;
     line-height: 1.6;
-    border-right: 2px solid #d8b6ff;
+    border-right: 2px solid #ff4d4d;
     white-space: pre-wrap;
     overflow: hidden;
     animation: blink 1.2s infinite;
@@ -26,9 +26,9 @@ body {
 
 /* Blinking cursor */
 @keyframes blink {
-    0% { border-color: #d8b6ff; }
+    0% { border-color: #ff4d4d; }
     50% { border-color: transparent; }
-    100% { border-color: #d8b6ff; }
+    100% { border-color: #ff4d4d; }
 }
 
 h1 {
@@ -41,28 +41,29 @@ h1 {
     margin: 40px auto;
     width: 250px;
     padding: 12px;
-    border: 2px solid #d8b6ff;
-    background: #050505;
-    color: #d8b6ff;
+    border: 2px solid #ff4d4d;
+    background: #080000;
+    color: #ff4d4d;
     font-family: "Courier New", monospace;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .choice:hover {
-    background: #d8b6ff;
-    color: #050505;
+    background: #ff4d4d;
+    color: #080000;
 }
 
 /* Hidden ending */
 .secret {
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, text-shadow 1s ease;
     margin-top: 40px;
 }
 
 .secret:hover {
     opacity: 1;
+    text-shadow: 0 0 15px #ff1a1a;
 }
 </style>
 </head>
@@ -99,7 +100,7 @@ your alarm clock rings.
 You do not wake up.`;
 
 let i = 0;
-const speed = 90; // slower than forest page for tension
+const speed = 90; // slow suspense typing
 const story = document.getElementById("story");
 
 function typeWriter() {
