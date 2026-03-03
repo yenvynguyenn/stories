@@ -1,86 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Dream Forest</title>
+    <title>Dream Sequence</title>
+
     <style>
         body {
-            background: linear-gradient(to bottom, #e6d6ff, #c8b6ff);
-            font-family: Georgia, serif;
+            background-color: black;
+            color: white;
+            font-family: "Courier New", monospace;
             text-align: center;
-            padding: 60px;
-            color: #4b3f72;
-        }
-
-        .box {
-            background: #f8f4ff;
-            padding: 50px;
-            border-radius: 20px;
-            width: 70%;
-            margin: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding-top: 120px;
         }
 
         h1 {
             font-size: 40px;
+            letter-spacing: 3px;
         }
 
-        button {
-            padding: 14px 28px;
-            margin: 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 10px;
+        p {
+            width: 60%;
+            margin: auto;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .choice {
+            display: block;
+            margin: 20px auto;
+            width: 250px;
+            padding: 12px;
+            border: 2px solid white;
+            background: black;
+            color: white;
+            font-family: "Courier New", monospace;
             cursor: pointer;
-            transition: 0.3s ease;
+            transition: 0.2s;
         }
 
-        .animals {
-            background-color: #a3d9a5;
-            color: #2f4f2f;
-        }
-
-        .witch {
-            background-color: #d6b3ff;
-            color: #4b0082;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
+        .choice:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
 
 <body>
 
-<div class="box">
-    <h1>🌙 The Dream Forest 🌙</h1>
+    <h1>THE DREAM FOREST</h1>
 
     <p>
-        You fall asleep… and wake up inside a glowing pastel forest.
-        Lavender mist floats between the trees, and the air feels unreal.
+        You fall asleep.
+        <br><br>
+        You wake up somewhere else.
+        <br><br>
+        The forest is silent.
+        Something is watching you.
     </p>
-
-    <p>
-        A fox, an owl, and a deer step forward.
-        “Do not trust the girl,” they whisper.
-    </p>
-
-    <p>
-        A soft-voiced girl appears, holding a map.
-        “Follow me,” she smiles.
-    </p>
-
-    <p><strong>Who will you trust?</strong></p>
 
     <a href="01.html">
-        <button class="animals">🌿 Listen to the Animals</button>
+        <button class="choice">Listen to the Animals</button>
     </a>
 
     <a href="02.html">
-        <button class="witch">🗺 Follow the Girl</button>
+        <button class="choice">Follow the Girl</button>
     </a>
-</div>
 
 </body>
 </html>
