@@ -12,20 +12,32 @@ body {
     padding-top: 100px;
 }
 
-h1 {
-    letter-spacing: 3px;
-}
-
-p {
+/* Typewriter text */
+.typewriter {
     width: 60%;
     margin: auto;
     margin-bottom: 30px;
     line-height: 1.6;
+    border-right: 2px solid #b6ffb6;
+    white-space: pre-wrap;
+    overflow: hidden;
+    animation: blink 1s infinite;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+    0% { border-color: #b6ffb6; }
+    50% { border-color: transparent; }
+    100% { border-color: #b6ffb6; }
+}
+
+h1 {
+    letter-spacing: 3px;
 }
 
 .choice {
     display: block;
-    margin: 20px auto;
+    margin: 40px auto;
     width: 250px;
     padding: 12px;
     border: 2px solid #b6ffb6;
@@ -40,6 +52,17 @@ p {
     background: #b6ffb6;
     color: #0b1a0b;
 }
+
+/* Hidden ending */
+.secret {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    margin-top: 40px;
+}
+
+.secret:hover {
+    opacity: 1;
+}
 </style>
 </head>
 
@@ -47,28 +70,42 @@ p {
 
 <h1>FOREST PATH</h1>
 
-<p>
-The fox lowers its voice.  
-The owl watches the trees.  
-The deer signals you to hide.
-<br><br>
-The girl walks past.
-Her shadow moves differently than she does.
-<br><br>
-You stay silent.
-You survive.
-</p>
+<p class="typewriter" id="story"></p>
 
-<p>
-You find a glowing doorway hidden between trees.
-You step through it.
-</p>
-
-<h2>YOU WAKE UP.</h2>
+<h2 class="secret">YOU WAKE UP.</h2>
 
 <a href="index.html">
     <button class="choice">Return to Dream</button>
 </a>
+
+<script>
+const text = `The fox lowers its voice.
+The owl watches the trees.
+The deer signals you to hide.
+
+The girl walks past.
+Her shadow moves differently than she does.
+
+You stay silent.
+You survive.
+
+You find a glowing doorway hidden between trees.
+You step through it.`;
+
+let i = 0;
+const speed = 35; // typing speed
+const story = document.getElementById("story");
+
+function typeWriter() {
+    if (i < text.length) {
+        story.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
+</script>
 
 </body>
 </html>
