@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Forest Guides</title>
+<title>Forest Path</title>
 
-    <style>
-        body {
-            background-color: #0b1a0b;
-            color: #d9ffd9;
-            font-family: "Courier New", monospace;
-            text-align: center;
-            padding: 100px;
-        }
+<style>
+body {
+    background-color: #0b1a0b;
+    color: #b6ffb6;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    padding-top: 100px;
+}
 
-        h1 {
-            font-size: 40px;
-            text-shadow: 0 0 8px #66ff66;
-        }
+h1 {
+    letter-spacing: 3px;
+}
 
-        p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: auto;
-            line-height: 1.6;
-        }
+p {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
 
-        a {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
-            background-color: #132e13;
-            color: #b6ffb6;
-            text-decoration: none;
-            border: 2px solid #66ff66;
-            transition: 0.3s;
-        }
+.choice {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #b6ffb6;
+    background: #0b1a0b;
+    color: #b6ffb6;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-        a:hover {
-            background-color: #1e4d1e;
-            box-shadow: 0 0 12px #66ff66;
-        }
-
-        /* Hidden Ending */
-        .secret {
-            opacity: 0;
-            transition: opacity 0.8s ease, text-shadow 0.8s ease;
-            margin-top: 60px;
-            cursor: pointer;
-        }
-
-        .secret:hover {
-            opacity: 1;
-            text-shadow: 0 0 15px #b6ffb6;
-        }
-    </style>
+.choice:hover {
+    background: #b6ffb6;
+    color: #0b1a0b;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>The Forest Protects You</h1>
+<h1>FOREST PATH</h1>
 
-    <p>
-        The animals guide you through the quiet trees.
-        The disguised girl searches for you, but the forest hides your path.
-        You listen. You trust.
-        The trees begin to glow softly.
-    </p>
+<p>
+The fox lowers its voice.  
+The owl watches the trees.  
+The deer signals you to hide.
+<br><br>
+The girl walks past.
+Her shadow moves differently than she does.
+<br><br>
+You stay silent.
+You survive.
+</p>
 
-    <h2 class="secret">YOU WAKE UP.</h2>
+<p>
+You find a glowing doorway hidden between trees.
+You step through it.
+</p>
 
-    <a href="index.html">Return to the Dream</a>
+<h2>YOU WAKE UP.</h2>
+
+<a href="index.html">
+    <button class="choice">Return to Dream</button>
+</a>
 
 </body>
 </html>
