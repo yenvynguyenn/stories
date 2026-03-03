@@ -1,57 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Daily Routine</title>
+    <title>The Dream Forest</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6d6ff, #c8b6ff);
+            font-family: Georgia, serif;
             text-align: center;
-            background: linear-gradient(to right, #ffd6e0, #cce7ff);
-            padding: 50px;
+            padding: 60px;
+            color: #4b3f72;
         }
 
         .box {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            width: 60%;
+            background: #f8f4ff;
+            padding: 50px;
+            border-radius: 20px;
+            width: 70%;
             margin: auto;
-            box-shadow: 0 0 15px gray;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 40px;
         }
 
         button {
-            padding: 12px 25px;
-            margin: 15px;
+            padding: 14px 28px;
+            margin: 20px;
             font-size: 16px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
+            transition: 0.3s ease;
         }
 
-        .morning { background-color: #ffcc70; }
-        .night { background-color: #6c63ff; color: white; }
-        .both { background-color: #00b894; color: white; }
+        .animals {
+            background-color: #a3d9a5;
+            color: #2f4f2f;
+        }
 
-        button:hover { opacity: 0.8; }
+        .witch {
+            background-color: #d6b3ff;
+            color: #4b0082;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
     </style>
 </head>
 
 <body>
 
 <div class="box">
-    <h1>My Interactive Daily Routine</h1>
-    <p>Choose your path:</p>
+    <h1>🌙 The Dream Forest 🌙</h1>
 
-    <a href="morning.html">
-        <button class="morning"> Morning Only</button>
+    <p>
+        You fall asleep… and wake up inside a glowing pastel forest.
+        Lavender mist floats between the trees, and the air feels unreal.
+    </p>
+
+    <p>
+        A fox, an owl, and a deer step forward.
+        “Do not trust the girl,” they whisper.
+    </p>
+
+    <p>
+        A soft-voiced girl appears, holding a map.
+        “Follow me,” she smiles.
+    </p>
+
+    <p><strong>Who will you trust?</strong></p>
+
+    <a href="animals.html">
+        <button class="animals">🌿 Listen to the Animals</button>
     </a>
 
-    <a href="night.html">
-        <button class="night"> Night Only</button>
-    </a>
-
-    <a href="fullday.html">
-        <button class="both"> Full Day (Long Path)</button>
+    <a href="witch.html">
+        <button class="witch">🗺 Follow the Girl</button>
     </a>
 </div>
 
