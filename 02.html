@@ -12,20 +12,33 @@ body {
     padding-top: 100px;
 }
 
-h1 {
-    letter-spacing: 3px;
-}
-
-p {
+/* Typewriter */
+.typewriter {
     width: 60%;
     margin: auto;
     margin-bottom: 30px;
     line-height: 1.6;
+    border-right: 2px solid #d8b6ff;
+    white-space: pre-wrap;
+    overflow: hidden;
+    animation: blink 1.2s infinite;
 }
 
+/* Blinking cursor */
+@keyframes blink {
+    0% { border-color: #d8b6ff; }
+    50% { border-color: transparent; }
+    100% { border-color: #d8b6ff; }
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+/* Button */
 .choice {
     display: block;
-    margin: 20px auto;
+    margin: 40px auto;
     width: 250px;
     padding: 12px;
     border: 2px solid #d8b6ff;
@@ -40,6 +53,17 @@ p {
     background: #d8b6ff;
     color: #050505;
 }
+
+/* Hidden ending */
+.secret {
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-top: 40px;
+}
+
+.secret:hover {
+    opacity: 1;
+}
 </style>
 </head>
 
@@ -47,33 +71,47 @@ p {
 
 <h1>DEEPER INTO THE FOREST</h1>
 
-<p>
-You follow her.
-The forest grows quieter.
-No wind.
-No animals.
-<br><br>
-She hands you the map.
-It feels warm.
-Too warm.
-<br><br>
-In the reflection of a black pond,
-her smile stretches too wide.
-</p>
+<p class="typewriter" id="story"></p>
 
-<p>
-Somewhere far away,
-your alarm clock rings.
-<br><br>
-You do not wake up.
-</p>
-
-<h2>YOU ARE STILL ASLEEP.</h2>
-<h2>YOU WILL ALWAYS BE ASLEEP.</h2>
+<h2 class="secret">YOU ARE STILL ASLEEP.</h2>
+<h2 class="secret">YOU WILL ALWAYS BE ASLEEP.</h2>
 
 <a href="index.html">
     <button class="choice">Restart</button>
 </a>
+
+<script>
+const text = `You follow her.
+The forest grows quieter.
+No wind.
+No animals.
+
+She hands you the map.
+It feels warm.
+Too warm.
+
+In the reflection of a black pond,
+her smile stretches too wide.
+
+Somewhere far away,
+your alarm clock rings.
+
+You do not wake up.`;
+
+let i = 0;
+const speed = 90; // slower than forest page for tension
+const story = document.getElementById("story");
+
+function typeWriter() {
+    if (i < text.length) {
+        story.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
+</script>
 
 </body>
 </html>
